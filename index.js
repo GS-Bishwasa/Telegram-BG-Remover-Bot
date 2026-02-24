@@ -101,8 +101,8 @@ Remove image backgrounds instantly using AI — fast, clean, and automatic.
 
 ━━━━━━━━━━━━━━━━━━
 
-<b>👨‍💻 Developer</b>
-© ${new Date().getFullYear()} GS Bishwasa. All rights reserved.
+<b>👨‍💻 Developer: GS Bishwasa</b>
+© ${new Date().getFullYear()} . All rights reserved.
 
 <b>🔗 Connect With Me</b>
 GitHub: <a href="https://github.com/GS-Bishwasa">github.com/GS-Bishwasa</a>
@@ -112,6 +112,41 @@ Telegram: @D_GmingHD
 
 💬 Feel free to reach out for feedback or collaboration!`,
     { parse_mode: "HTML", disable_web_page_preview: true }
+  );
+});
+
+// /help command
+bot.onText(/\/help/, (msg) => {
+  const chatId = msg.chat.id;
+
+  bot.sendMessage(
+    chatId,
+`<b>🤖 How To Use This Bot</b>
+
+1️⃣ Send any photo to this bot.
+2️⃣ Wait a few seconds while the background is removed.
+3️⃣ Download your transparent PNG image.
+
+━━━━━━━━━━━━━━━━━━
+
+<b>📌 Tips:</b>
+• Send clear, high-quality images for best results.
+• Works best with people, products, and objects.
+• Background is removed automatically — no extra command needed.
+
+━━━━━━━━━━━━━━━━━━
+
+If something goes wrong, simply send the image again.
+
+Need more details? Use <b>/info</b>
+
+<b>👨‍💻 Developer: GS Bishwasa</b>
+© ${new Date().getFullYear()} . All rights reserved.
+`,
+    {
+      parse_mode: "HTML",
+      disable_web_page_preview: true
+    }
   );
 });
 
