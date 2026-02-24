@@ -60,7 +60,7 @@ const bgRemovedUrl = imagekit.url({
   path: upload.filePath,
   transformation: [
     {
-      raw: "e-bgremove"
+      raw: "e-bgremove,f-png"
     }
   ],
 });
@@ -72,13 +72,48 @@ const transformedImage = await axios.get(bgRemovedUrl, {
 });
 
 // Send as buffer instead of URL
-await bot.sendPhoto(chatId, Buffer.from(transformedImage.data), {
+await bot.sendDocument(chatId, Buffer.from(transformedImage.data), {
   caption: "✅ Background Removed!",
 });
   } catch (error) {
     console.error(error);
     bot.sendMessage(chatId, "❌ Something went wrong.");
   }
+});
+
+// /info command
+bot.onText(/\/info/, (msg) => {
+  const chatId = msg.chat.id;
+
+  bot.sendMessage(
+    chatId,
+`🎨 *Telegram Background Remover Bot*
+
+Remove image backgrounds instantly using AI — fast, clean, and automatic.
+
+━━━━━━━━━━━━━━━━━━
+
+✨ *What This Bot Does*
+• Send any photo
+• Background gets removed automatically
+• Receive transparent PNG image
+• Works in seconds ⚡
+
+━━━━━━━━━━━━━━━━━━
+
+👨‍💻 *Developer*
+© ${new Date().getFullYear()} GS Bishwasa. All rights reserved.
+
+🔗 *Connect With Me*
+GitHub: https://github.com/GS-Bishwasa  
+LinkedIn: https://www.linkedin.com/in/gs-bishwasa-480764331  
+Twitter (X): https://x.com/GSBishwasa  
+Telegram: @D_GmingHD  
+
+💬 Feel free to reach out for feedback or collaboration!`
+    ,
+    { parse_mode: "Markdown" }
+  );
 });
 
 app.listen(process.env.PORT, () => {
