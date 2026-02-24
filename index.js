@@ -87,31 +87,30 @@ bot.onText(/\/info/, (msg) => {
 
   bot.sendMessage(
     chatId,
-`<b>🎨 Telegram Background Remover Bot</b>
+`🎨 Telegram Background Remover Bot
 
 Remove image backgrounds instantly using AI — fast, clean, and automatic.
 
 ━━━━━━━━━━━━━━━━━━
 
-<b>✨ What This Bot Does</b>
-• Send any photo  
-• Background gets removed automatically  
-• Receive transparent PNG image  
-• Works in seconds ⚡  
+✨ What This Bot Does
+• Send any photo
+• Background gets removed automatically
+• Receive transparent PNG image
+• Works in seconds ⚡
 
 ━━━━━━━━━━━━━━━━━━
 
-<b>👨‍💻 Developer</b>
+👨‍💻 Developer
 © ${new Date().getFullYear()} GS Bishwasa. All rights reserved.
 
-<b>🔗 Connect With Me</b>
-GitHub: <a href="https://github.com/GS-Bishwasa">github.com/GS-Bishwasa</a>
-LinkedIn: <a href="https://www.linkedin.com/in/gs-bishwasa-480764331">LinkedIn Profile</a>
-Twitter (X): <a href="https://x.com/GSBishwasa">@GSBishwasa</a>
+🔗 Connect With Me
+GitHub: https://github.com/GS-Bishwasa
+LinkedIn: https://www.linkedin.com/in/gs-bishwasa-480764331
+Twitter (X): https://x.com/GSBishwasa
 Telegram: @D_GmingHD
 
-💬 Feel free to reach out for feedback or collaboration!`,
-    { parse_mode: "HTML", disable_web_page_preview: true }
+💬 Feel free to reach out for feedback or collaboration!`
   );
 });
 
