@@ -4,7 +4,7 @@ A powerful **Telegram bot** that automatically removes image backgrounds using A
 
 Perfect for profile pictures, thumbnails, product images, design work, and content creation.
 
-🚀 **Live Bot:** (Add your bot link here)  
+🚀 **Live Bot:** [@imagebg_remover_bot](https://t.me/imagebg_remover_bot)  
 🌐 **Backend Deployed On:** Render  
 ☁️ **Image Processing:** ImageKit AI Background Removal  
 
