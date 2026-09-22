@@ -75,6 +75,15 @@ const transformedImage = await axios.get(bgRemovedUrl, {
 await bot.sendDocument(chatId, Buffer.from(transformedImage.data), {
   caption: "✅ Background Removed!",
 });
+
+// 🗑️ Delete the uploaded file from ImageKit so it doesn't stay stored permanently
+try {
+  await imagekit.deleteFile(upload.fileId);
+  console.log(`Deleted ImageKit file: ${upload.fileId}`);
+} catch (deleteErr) {
+  console.error("Failed to delete ImageKit file:", deleteErr.message);
+}
+
   } catch (error) {
     console.error(error);
     bot.sendMessage(chatId, "❌ Something went wrong.");
